@@ -50,16 +50,14 @@ body {
     align-items: center;
 }
 
-/* Blinking question mark */
 .blink {
-    font-size: 3rem; /* Match the header text size */
+    font-size: 3rem;
     color: var(--secondary-color);
     animation: smooth-blink 2s ease-in-out infinite;
     cursor: pointer;
     transition: opacity 0.5s ease;
 }
 
-/* Smoother blink animation */
 @keyframes smooth-blink {
     0%, 100% {
         opacity: 1;
@@ -69,7 +67,6 @@ body {
     }
 }
 
-/* Hidden content that appears on hover */
 .reveal-content {
     display: none;
     flex-direction: column;
@@ -77,7 +74,7 @@ body {
 }
 
 .reveal-image {
-    width: 200px; /* Adjust as needed */
+    width: 200px;
     height: auto;
     margin-top: 10px;
 }
@@ -89,7 +86,6 @@ body {
     position: relative;
 }
 
-/* Show image and text on hover, hide question mark */
 .hover-container:hover .blink {
     display: none;
 }
