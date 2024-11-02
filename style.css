@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #34ff00;
+    --secondary-color: #ff00cf;
+    --font-family: 'Fira Mono', monospace;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-family);
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 10%; /* Adjust this to control the top position */
+    width: 100%;
+}
+
+.header .text {
+    font-size: 3rem; /* Large font size */
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.blink {
+    font-size: 3rem; /* Match the header text size */
+    color: var(--secondary-color);
+    animation: blink 1s steps(2, start) infinite;
+    cursor: pointer;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+/* Blinking animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* "Nein" text settings */
+.reveal {
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0; /* Hidden initially */
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+/* Show "Nein" when hovering over the question mark */
+.blink:hover {
+    opacity: 1; /* Hide the question mark */
+}
+
+.blink:hover + .reveal {
+    opacity: 0; /* Show "Nein" */
+}
