@@ -80,10 +80,10 @@ body {
 }
 
 .text {
-    color: var(--primary-color); /* Set text color */
+    color: var(--secondary-color); /* Set text color */
 }
 .text p {
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-top: 10px;
     position: relative;
 }
