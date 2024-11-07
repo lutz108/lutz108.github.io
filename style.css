@@ -79,8 +79,10 @@ body {
     margin-top: 10px;
 }
 
+.text {
+    color: var(--primary-color); /* Set text color */
+}
 .text p {
-    color: var(--primary-color);
     font-size: 1.3rem;
     margin-top: 10px;
     position: relative;
